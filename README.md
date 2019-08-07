@@ -1,10 +1,7 @@
 # Welcome to the EOS MainNet
 
-Based on tag: mainnet-1.6.0  
+Based on tag: v1.7.4  
 Network Monitor and Voting command prepering tool: <a href="http://eosnetworkmonitor.io/">EOSnetworkMonitor.io</a> 
-
-! new nodeos config parametr in 1.6.0:
-`chain-threads = 8`
 
 
 # Manual installation
@@ -15,10 +12,10 @@ Network Monitor and Voting command prepering tool: <a href="http://eosnetworkmon
 mkdir /home/eos-sources  
 cd /home/eos-sources  
 
-git clone https://github.com/EOS-Mainnet/eos.git --recursive    
+git clone https://github.com/eosio/eos --recursive    
 cd eos  
 
-git checkout mainnet-1.6.0 
+git checkout v1.7.4 
 git submodule update --init --recursive   
 
 ./eosio_build.sh -P -f  
@@ -27,11 +24,11 @@ git submodule update --init --recursive
 ## Update EOS
 
 ```
-mkdir /home/eos-sources  
 cd /home/eos-sources/eos  
 
-git checkout mainnet-1.6.0  
-git submodule sync  
+git checkout -f  
+git branch -f  
+git checkout v1.7.4  
 git submodule update --init --recursive   
 
 ./eosio_build.sh -P -f  
